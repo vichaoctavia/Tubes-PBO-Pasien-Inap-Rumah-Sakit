@@ -12,15 +12,13 @@ package tubespbo;
 public class PasienInap {
 	private Pasien pasien;
 	private Dokter dokter;
-	private String[] diagnosa;
+	private String[] diagnosa = new String[5];
 	private int jumlahdiagnosa;
-	private String tglMasuk;
 	
-	public PasienInap (Pasien pasien, Dokter dokter, String tglMasuk)
+	public PasienInap (Pasien pasien, Dokter dokter)
 	{
 		this.pasien = pasien;
 		this.dokter = dokter;
-		this.tglMasuk = tglMasuk;
 	}
 	
 	public void addDiagnosa(String gejala)
@@ -37,6 +35,7 @@ public class PasienInap {
 	public void deleteDiagnosa(int n)
 	{
 		diagnosa[n] = null;
+		jumlahdiagnosa--;
 	}
 	
 	public void setPasien(Pasien pasien)
@@ -59,8 +58,8 @@ public class PasienInap {
 		return dokter;
 	}
 	
-	public String getTglMasuk()
+	public int getJumlahDiagnosa()
 	{
-		return tglMasuk;
+		return jumlahdiagnosa;
 	}
 }
