@@ -23,11 +23,6 @@ public abstract class Orang{
 		this.alamat = alamat;
 	}
 	
-	public void setNama(String nama)
-	{
-		this.nama = nama;
-	}
-	
 	public String getNama()
 	{
 		return nama;
