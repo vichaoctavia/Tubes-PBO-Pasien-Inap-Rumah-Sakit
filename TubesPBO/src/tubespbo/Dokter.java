@@ -7,7 +7,7 @@ package tubespbo;
 
 /**
  *
- * @author asus
+ * @author Vicha
  */
 public class Dokter extends Orang {
 	private int noSip;
