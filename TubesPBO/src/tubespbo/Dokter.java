@@ -9,6 +9,6 @@ package tubespbo;
  *
  * @author Adzan
  */
-public class Dokter {
+public class Dokter extends Orang {
     
 }
