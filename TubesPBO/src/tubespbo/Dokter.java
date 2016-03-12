@@ -42,4 +42,6 @@ public class Dokter extends Orang {
 	public String getSpesialis() {
 		return spesialis;
 	}
+
+
 }
