@@ -11,7 +11,6 @@ package tubespbo;
  */
 public class Ruangan{
 	private PasienInap[] daftarPasien = new PasienInap[4];
-	private PasienInap daftarPasienn;
 	private Kelas namakelas;
 	private int noKamar;
 	private int jumlahpasien;
@@ -37,9 +36,10 @@ public class Ruangan{
 	
 	public PasienInap getPasienInapbyid(int id)
 	{
+		PasienInap daftarPasienn = null;
 		if (daftarPasien[0].getPasien() != null)
 		{
-			for (int i=0;i<5;i++)
+			for (int i=0;i<jumlahpasien;i++)
 			{
 				if (daftarPasien[i].getPasien().getIdPasien() == id)
 				{
@@ -48,40 +48,47 @@ public class Ruangan{
 				
 				else
 				{
-					daftarPasienn = null;;
+					daftarPasienn = null;
 				}
 			}
 		}
 		
 		else
 		{
-			System.out.println ("Pasien Tidak Terdaftar");
+			daftarPasienn = null;
 		}
 		
 		return daftarPasienn;
 	}
 	
-	public void RemovePasienInap(int id)
+	public int getPasienInapbyidandindeks(int id)
 	{
+		int indeks = -1;
 		if (daftarPasien[0].getPasien() != null)
 		{
-			for (int i=0;i<5;i++)
+			for (int i=0;i<jumlahpasien;i++)
 			{
 				if (daftarPasien[i].getPasien().getIdPasien() == id)
 				{
-					daftarPasien[i] = null;
-				}
-				
-				else
-				{
-					System.out.println ("Pasien Tidak Terdaftar");
+					indeks = i;
 				}
 			}
 		}
-		
+		return indeks;
+	}
+	
+	public boolean RemovePasienInap(int id)
+	{
+		int index = getPasienInapbyidandindeks(id);
+		if (index != -1)
+		{
+			daftarPasien[index] = null;
+			jumlahpasien--;
+			return true;
+		}
 		else
 		{
-			System.out.println ("Pasien Tidak Terdaftar");
+			return false;
 		}
 	}
 	
