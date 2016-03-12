@@ -10,5 +10,18 @@ package tubespbo;
  * @author Adzan
  */
 public class Kelas {
-    
+    	private String namaKelas;
+	
+	public Kelas (String nmkls)
+	{
+		this.namaKelas = nmkls;
+	}
+	
+	public void setNamaKelas(String namaKelas) {
+		this.namaKelas=namaKelas;
+	}
+	
+	public String getNamaKelas() {
+		return namaKelas;
+	}
 }
