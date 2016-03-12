@@ -51,5 +51,45 @@ public class Driver {
 		ru[2].tambahPasienInap(pas[3],dok[1]);
 		ru[2].tambahPasienInap(pas[4],dok[2]);
 		ru[3].tambahPasienInap(pas[5],dok[2]);
+    
+                System.out.println("----------------------------------");
+		System.out.println("----Test Pembuatan Semua Objek----");
+		System.out.println("----------------------------------");
+		System.out.println();
+		System.out.println("----------------------------------");
+		System.out.println("Dokter");
+		for(int i=0;i<dok.length;i++)
+		{
+			System.out.println("----------------------------------");
+			System.out.println("Nama Dokter		: "+dok[i].getNama());
+			System.out.println("Umur Dokter		: "+dok[i].getUmur());
+			System.out.println("Jenis Kelamin Dokter	: "+dok[i].getJenisKelamin());
+			System.out.println("Alamat			: "+dok[i].getAlamat());
+			System.out.println("No SIP			: "+dok[i].getNoSip());
+			System.out.println("Spesialis		: "+dok[i].getSpesialis());
+		}
+		System.out.println();
+		System.out.println("----------------------------------");
+		System.out.println("Pasien");
+		for(int i=0;i<pas.length;i++)
+		{
+			System.out.println("----------------------------------");
+			System.out.println("Nama Pasien		: "+pas[i].getNama());
+			System.out.println("Umur Pasien		: "+pas[i].getUmur());
+			System.out.println("Jenis Kelamin Pasien	: "+pas[i].getJenisKelamin());
+			System.out.println("Alamat Pasien		: "+pas[i].getAlamat());
+			System.out.println("ID Pasien		: "+pas[i].getIdPasien());
+			System.out.println("Tanggal Daftar Pasien	: "+pas[i].getTglDaftar());
+			System.out.println("Golongan Darah Pasien	: "+pas[i].getGolDarah());
+		}
+		
+		ru[0].getPasienInapbyindex(0).addDiagnosa("Kanker");
+		ru[1].getPasienInapbyindex(0).addDiagnosa("Struk");
+		ru[1].getPasienInapbyindex(1).addDiagnosa("Sinus");
+		ru[2].getPasienInapbyindex(0).addDiagnosa("Katarak");
+		ru[2].getPasienInapbyindex(1).addDiagnosa("Demam");
+		ru[3].getPasienInapbyindex(0).addDiagnosa("Vertigo");
+		
 }
+    
 }
