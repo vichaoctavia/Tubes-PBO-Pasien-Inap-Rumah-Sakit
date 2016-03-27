@@ -19,5 +19,5 @@ import tubespbo.Ruangan;
  * @author Adzan
  */
 public class ViewConsole {
-    
+
 }
