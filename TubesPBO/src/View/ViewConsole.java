@@ -109,4 +109,77 @@ public class ViewConsole {
                     }
                     }
                     break;
+                case 2:
+                    pil2 = 0;
+                    while(pil2 != 4){
+                    System.out.println();
+                    System.out.println("-Data Pasien-");
+                    System.out.println("1.Insert Pasien");
+                    System.out.println("2.Search Pasien");
+                    System.out.println("3.Delete Pasien");
+                    System.out.println("4.Kembali");
+                    System.out.println("Pilih :");
+                    pil2 = s1.nextInt();
+                    switch(pil2){
+                        case 1:
+                            System.out.print("Masukkan Nama : ");
+                            String namapas = s2.nextLine();
+                            System.out.print("Masukkan Umur : ");
+                            int umurpas = s1.nextInt();
+                            System.out.print("Masukkan Jenis Kelamin : ");
+                            String jenisKelaminpas = s2.nextLine();
+                            System.out.print("Masukkan Alamat : ");
+                            String alamatpas = s2.nextLine();
+                            System.out.print("Masukkan ID Pasien : ");
+                            int idpasien = s1.nextInt();
+                            System.out.print("Masukkan Tanggal Daftar : ");
+                            String tgldaftar = s2.nextLine();
+                            System.out.print("Masukkan Golongan Darah : ");
+                            String goldarah = s2.nextLine();
+                            app.insertPasien(namapas,umurpas,jenisKelaminpas,alamatpas,idpasien,tgldaftar,goldarah);
+                            break; 
+                        
+                        case 2:
+                            System.out.println();
+                            System.out.print("Masukkan Index Pasien : ");
+                            int idpas = s1.nextInt();
+                            Pasien pas = app.getPasien(idpas);
+                            if (pas != null) 
+                            {
+                                System.out.println("Nama = " + pas.getNama());
+                                System.out.println("Umur = " + pas.getUmur());
+                                System.out.println("Jenis Kelamin = " + pas.getJenisKelamin());
+                                System.out.println("Alamat = " + pas.getAlamat());
+                                System.out.println("ID Pasien = " + pas.getIdPasien());
+                                System.out.println("Tanggal Daftar = " + pas.getTglDaftar());
+                                System.out.println("Golongan Darah = " + pas.getGolDarah());
+                            } 
+                            else 
+                            {
+                                System.out.println("Data Tidak Ditemukan");
+                            }
+                            break;
+                         
+                        case 3:
+                            System.out.println();
+                            System.out.print("Masukkan Indeks Dokter : ");
+                            int j = s1.nextInt();
+                            Dokter f = app.getDokter(j);
+                            if (f != null) 
+                            {
+                                app.deleteDokter(j);
+                                System.out.println("Data Dokter Berhasil Dihapus");
+                            }
+                            else {
+                                System.out.println("Data Tidak Ditemukan");
+                            }
+                            break;
+                        
+                        case 4:
+                            break;
+                    
+                    }
+                    }
+                    break;
+
 }
