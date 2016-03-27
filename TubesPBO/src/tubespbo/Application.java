@@ -54,4 +54,23 @@ public class Application {
         return listKelas.get(m);
     }
     
+    public int banyakdokter(){
+        return listDokter.size();
+    }
+    
+    public int banyakpasien(){
+        return listPasien.size();
+    }
+    
+    public int banyakkelas(){
+        return listKelas.size();
+    }
+    
+    public int banyakruangan(){
+        return listRuangan.size();
+    }
+    
+    public Ruangan getRuangan(int n){
+        return listRuangan.get(n);
+    }
 }
