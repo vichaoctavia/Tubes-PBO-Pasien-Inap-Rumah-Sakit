@@ -29,4 +29,29 @@ public class Application {
     public void insertKelas(String nmkls) {
         listKelas.add(new Kelas(nmkls));
     }
+    
+    public void insertRuangan(int nokam, Kelas nmkel) {
+        listRuangan.add(new Ruangan(nokam, nmkel));
+    }
+
+    public Dokter getDokter(int i) {
+        return listDokter.get(i);
+    }
+    
+    public void deleteDokter(int j){
+        listDokter.remove(j);
+    }
+    
+    public Pasien getPasien(int k) {
+        return listPasien.get(k);
+    }
+    
+    public void deletePasien(int l){
+        listPasien.remove(l);
+    }
+    
+    public Kelas getKelas(int m){
+        return listKelas.get(m);
+    }
+    
 }
